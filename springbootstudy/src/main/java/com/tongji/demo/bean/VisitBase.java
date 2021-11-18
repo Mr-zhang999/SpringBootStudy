@@ -10,7 +10,7 @@ public class VisitBase {
     private Integer accountId;
     private String content;
     private Integer status;
-    private List<Integer> shopIds;
+  //  private List<Integer> shopIds;
 
 /*    public VisitBase() {
     }*/

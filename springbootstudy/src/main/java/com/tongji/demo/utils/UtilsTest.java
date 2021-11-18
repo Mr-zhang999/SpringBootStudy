@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class UtilsTest {
-
     public void print(){
         System.out.println("@autowired Test");
     }

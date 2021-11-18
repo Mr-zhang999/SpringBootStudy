@@ -43,9 +43,9 @@ public class VisitTest {
         vb.setAccountId(visitBase.getAccountId());
         vb.setStatus(visitBase.getStatus());
         vb.setContent("返回的");
-        vb.setShopIds(visitBase.getShopIds());
+        //vb.setShopIds(visitBase.getShopIds());
 
         return JSON.toJSONString(vb);
-       // return "hhhh";
     }
+
 }
