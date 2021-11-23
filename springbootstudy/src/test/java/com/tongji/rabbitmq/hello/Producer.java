@@ -11,7 +11,8 @@ import java.util.concurrent.TimeoutException;
 /*
  * @author ZhangChunyuan
  * @date 2021-11-22 20:17
- */public class Producer {
+ */
+    public class Producer {
      private final static String QUEUE_NAME = "HELLO";
 
     public static void main(String[] args) throws IOException, TimeoutException {
@@ -19,15 +20,12 @@ import java.util.concurrent.TimeoutException;
         connectionFactory.setHost("112.124.20.110");
         connectionFactory.setUsername("root");
         connectionFactory.setPassword("123456789");
-
         Connection connection = connectionFactory.newConnection();
         Channel channel = connection.createChannel();
+        //channel.basicQos();
         channel.queueDeclare(QUEUE_NAME,true,false,false,null);
         String message = "hello world";
-
         channel.basicPublish("",QUEUE_NAME,null,message.getBytes(StandardCharsets.UTF_8));
-
         System.out.println("OK");
-
     }
 }
