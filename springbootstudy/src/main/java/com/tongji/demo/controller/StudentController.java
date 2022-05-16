@@ -6,10 +6,8 @@ import com.tongji.demo.service.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.Date;
 import java.util.List;
 
@@ -38,10 +36,22 @@ public class StudentController {
             person.setBirthday(new Date());
             person.setSexy("nan");
             studentService.addUser(person);
-
-
         }
 
         return "Hello World!";
     }
+
+    // 重定向
+    @GetMapping("red")
+    public String testRed(){
+        return "redirect:blue";
+    }
+    @GetMapping("blue")
+    @ResponseBody
+    public String testBlue(){
+        return "blue";
+    }
+
+
+
 }

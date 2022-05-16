@@ -8,7 +8,8 @@ import java.util.concurrent.TimeoutException;
 /*
  * @author ZhangChunyuan
  * @date 2021-11-22 20:26
- */public class Consumer {
+ */
+public class Consumer {
     private final static String QUEUE_NAME = "HELLO";
 
     public static void main(String[] args) throws IOException, TimeoutException {

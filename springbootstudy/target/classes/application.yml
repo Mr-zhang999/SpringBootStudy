@@ -10,3 +10,5 @@ mybatis:
   type-aliases-package: com/tongji/demo/mapper
   mapper-locations: classpath:/mapper/*.xml
 
+
+
